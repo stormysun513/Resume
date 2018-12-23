@@ -1,0 +1,266 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy CV/Resume
+% XeLaTeX Template
+% Version 1.0 (5/5/2014)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Debarghya Das (http://www.debarghyadas.com)
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\lastupdated % Print the Last Updated text at the top right
+
+\namesection{Yu-Lun}{Tsai}{ % Your name
+\href{mailto:stormysun513@gmail.com}{stormysun513@gmail.com} | 412.819.8017 % Your contact information
+}
+
+%----------------------------------------------------------------------------------------
+%	LEFT COLUMN
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.35\textwidth} % The left column takes up 35% of the text width of the page
+
+%------------------------------------------------
+% Education
+%------------------------------------------------
+
+\section{Education} 
+
+%------------------------------------------------
+\subsection{Carnegie Mellon University}
+\descript{School of Computer Science}
+\location{Pittsburgh, PA}
+\sectionspace % Some whitespace after the section
+\descript{MS in Embedded Software Engineering}
+\location{December 2017} 
+
+\sectionspace
+%------------------------------------------------
+\subsection{National Taiwan University}
+\descript{College of Electrical Engineering and
+Computer Science}
+\location{Taipei, Taiwan}
+\sectionspace % Some whitespace after the section
+\descript{BS in Electrical Engineering}
+\location{June 2015} 
+
+\sectionspace
+%------------------------------------------------
+% Coursework
+%------------------------------------------------
+
+\section{Coursework}
+
+%------------------------------------------------
+\subsection{Software}
+Object Oriented Design and Programming \\
+Architectures for Software Systems \\
+Algorithms \\
+Analysis of Software Artifacts \\
+Data Structure and Programming \\
+% Software Engineering Tools Lab \\
+% {\footnotesize \textit{\textbf{(BASH \& Python 3) }}} \\
+
+\sectionspace
+%------------------------------------------------
+\subsection{Computer Engineering}
+Parallel Computer Architecture and Programming \\
+Real-Time Embedded System \\
+Operating System \\
+Computer Network \\
+
+\sectionspace
+
+%------------------------------------------------
+% Skills
+%------------------------------------------------
+
+\section{Skills}
+
+%------------------------------------------------
+\subsection{Programming}
+\location{Experienced:}
+C \textbullet{} C++ \textbullet{} Bash \textbullet{}
+Unix \textbullet{} Python \\
+\location{Familiar:}
+Java \textbullet{} JavaScript \textbullet{}
+JQuery \textbullet{} HTML/CSS \\
+\sectionspace
+
+%------------------------------------------------
+\subsection{Tools/Applications}
+Vim/Tmux/Cscope \textbullet{} Linux Kernel \textbullet{}
+BluetoothLE \textbullet{} Android NDK \textbullet{}
+ARM \textbullet{} Assembly \\
+
+\sectionspace
+\subsection{Operating Systems}
+Linux \textbullet{} Mac \textbullet{} Windows
+
+\sectionspace % Some whitespace after the section
+%------------------------------------------------
+% Links
+%------------------------------------------------
+
+\section{Links} 
+
+Github: \href{https://github.com/stormysun513}{stormysun513} \\
+LinkedIn: \href{https://linkedin.com/in/yuluntsai}{yuluntsai} \\
+
+\sectionspace % Some whitespace after the section
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the left column
+\hfill
+%
+%----------------------------------------------------------------------------------------
+%	RIGHT COLUMN
+%----------------------------------------------------------------------------------------
+%
+\begin{minipage}[t]{0.645\textwidth} % The right column takes up 64.5% of the text width of the page
+
+%------------------------------------------------
+% Professional Experience
+%------------------------------------------------
+
+\section{Experience}
+
+\runsubsection{Fortinet Inc.}
+\descript{| Embedded Software Development Engineer}
+
+\location{February 2018 – Present | Sunnyvale, CA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+\item Designed and developed run-time configuration and network interface status synchronization protocols that deals with device failures, configuration changes, and system failover in a high availability cluster
+\item Achieved distribution transparency by extending the existing remote command execution framework and remote procedure call library used for gathering in-chassis system information and status
+\item Cooperated with firmware/hardware teams to bring up FortiOS image and network switches on new hardware platforms
+\item Created automated scripts for development lab environment setup on VMs, switches, and firewalls so as to meet the feature verification requirement without interfering other developers
+\item Integrated system memory diagnosis tools with daemons to track runt-time resource allocation and cleanup 
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+\runsubsection{CMU \& Bezirk, Robert Bosch LLC.}
+\descript{| Software Engineering Practicum}
+
+\location{Jan. 2017 – Aug. 2017 | Pittsburgh, PA}
+\begin{tightitemize}
+\item Designed and implemented an example restaurant recommendation application based on the Bezirk middleware android package
+\item Participated in the entire software development life cycle: requirement engineering with client, software architecture design, implementation, and code quality assurance
+\item Practiced and integrate test automation into software development process (e.g. unit test, intgration test, and static code analysis)
+\end{tightitemize}
+
+\sectionspace
+
+%------------------------------------------------
+\runsubsection{National Taiwan University}
+\descript{| Research Assistant}
+
+\location{Sep. 2014 – Jun. 2016 | Taipei, Taiwan}
+\begin{tightitemize}
+\item Developed a mobile alcohol and drug consumption self-monitoring system including hardware, firmware, and Android application, helping 200+ patients with relapse prevention
+\item Implemented device drivers on bare-metal micro-controllers through DMA, UART, I2C, and SPI interfaces
+\item Pipelined image upload from an external camera module to the web server using BluetoothLE and HTTP
+\end{tightitemize}
+
+%------------------------------------------------
+% Projects
+%------------------------------------------------
+
+\section{Selected Projects}
+
+%------------------------------------------------
+\runsubsection{Real-time Task Enforcement in Linux Kernel}
+\descript{}
+Course project for Real-Time Embedded System in CMU. \\
+\location{Aug. 2016 – Dec. 2016}
+\begin{tightitemize}
+\item Developed a real-time task reservation and enforcement framework to guarantee each task gets sufficient CPU resource
+\item Implemented loadable kernel modules, system calls, and sysfs interfaces that allow developers to configure the framework, set and cancel real-time tasks reservation, and monitor current reservation status
+\item Generalized the framework to multiple-processor scenarios while minimizing CPU power consumption
+\end{tightitemize}
+
+%------------------------------------------------
+% \runsubsection{DVI Image Processing ASIC} \\
+% Dynamic image-adjustment ASIC capable of color correction
+% \begin{tightitemize}
+% \item Hardware implementation of the Daltonization color-correction algorithm for color blind users
+% \item Able to keep up with 60FPS at 640x480 resolution while maintaining an average color error of <0.05\%.
+% \end{tightitemize}
+
+% \sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Awards
+%------------------------------------------------
+
+% \section{Honors/Awards} 
+
+% \begin{tabular}{rll}
+% 2015 & Single Cycle Processor Design (ranked 7 out of 50+ in efficiency) \\
+% 2012 & Purdue First Year Engineering Honors Program \\
+% 2012 & Recipient of AT\&T Foundation Scholarship \\
+% 2011 & Recipient of Purdue Presidential Scholarship (4 year scholarship) \\
+% \end{tabular}
+
+% \sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Societies
+%------------------------------------------------
+
+%\section{Membership} 
+
+%\begin{tabular}{rll}
+%2011-2015 & Alpha Kappa Lambda Fraternity\\
+
+%\end{tabular}
+
+%\sectionspace % Some whitespace after the section
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the right column
+
+%----------------------------------------------------------------------------------------
+%	SECOND PAGE (EXAMPLE)
+%----------------------------------------------------------------------------------------
+
+%\newpage % Start a new page
+
+%\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+
+%\section{Example Section}
+
+%\end{minipage} % The end of the left column
+%\hfill
+%\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+
+%\section{Example Section 2}
+
+%\end{minipage} % The end of the right column
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
